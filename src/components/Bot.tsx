@@ -13,6 +13,7 @@ import socketIOClient from 'socket.io-client';
 import { Popup } from '@/features/popup';
 import { Avatar } from '@/components/avatars/Avatar';
 import { DeleteButton } from '@/components/SendButton';
+import { Logo } from '@/components/Logo';
 
 type messageType = 'apiMessage' | 'userMessage' | 'usermessagewaiting';
 
@@ -504,6 +505,7 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                 'border-top-right-radius': props.isFullPage ? '0px' : '6px',
               }}
             >
+              <Logo />
               <Show when={props.titleAvatarSrc}>
                 <>
                   <div style={{ width: '15px' }} />
